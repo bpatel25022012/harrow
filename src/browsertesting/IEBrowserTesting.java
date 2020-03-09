@@ -1,14 +1,15 @@
+package browsertesting;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class FireFoxTesting {
+public class IEBrowserTesting {
 
-    public static void main(String[] args) {// do it by heart
-        // to open the url with
+    public static void main(String[] args) {
 
         String baseUrl = "https://www.harrow.gov.uk/";
-        System.setProperty("webdriver.gecko.driver","driver/geckodriver.exe" );
-        WebDriver driver = new FirefoxDriver();
+        System.setProperty("webdriver.ie.driver","driver/IEDriverServer.exe" );
+        WebDriver driver = new InternetExplorerDriver();
         driver.manage().window().maximize(); // maximize the window
         driver.get(baseUrl);
         String title = driver.getTitle(); // get the page
